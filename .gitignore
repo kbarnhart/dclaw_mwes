@@ -1,0 +1,16 @@
+*.mod
+xgeoclaw
+*/_output/*
+fort*
+*.data
+Makefile
+.DS_Store
+.plots
+.output
+.data
+*.png
+*.tt2
+*.log
+*.yaml
+*.pyc
+*.mp4
