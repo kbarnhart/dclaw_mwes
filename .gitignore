@@ -3,7 +3,6 @@ xgeoclaw
 */_output/*
 fort*
 *.data
-Makefile
 .DS_Store
 .plots
 .output

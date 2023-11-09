@@ -24,7 +24,7 @@ conda install -c conda-forge gfortran
 # this messed up my FFLAGS, when I set them back to normal, I compiled without error.
 export FFLAGS='-O2 -fopenmp -fdefault-double-8 -fdefault-real-8 -fdefault-integer-8 -fallow-argument-mismatch'
 
-# they had been set to 
+# for posteriority, when compiler flags were messed up, they had been set to 
 echo $FFLAGS
 -march=core2 -mtune=haswell -ftree-vectorize -fPIC -fstack-protector -O2 -pipe -isystem /opt/anaconda3/envs/dclaw_mwe/include
 
@@ -39,8 +39,7 @@ cd ../dam_break_restart
 make new
 python setup.py
 make .data
-ln -s ../dam_break_twostep/_output/fort.chk0001 restart.data
-./xgeoclaw 
+ln -s ../dam_break_twostep/_output/fort.chk0001 restart.data./xgeoclaw 
 
 # compare the following two files
 dam_break_twostep/_output/fort.q0001 <- made without restart
